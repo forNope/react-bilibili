@@ -1,0 +1,21 @@
+.part, .progress {
+	color: $gray-600;
+}
+
+.device {
+	display: inline-block;
+	position: relative;
+	width: 20px;
+	height: 20px;
+	margin-left: 12px;
+	top: 4px;
+	background-image: resolve("assets/icons.png");
+
+	&.pc {
+		background-position: -1367px -406px;
+	}
+
+	&.mobile {
+		background-position: -1367px -466px;
+	}
+}

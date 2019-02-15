@@ -1,0 +1,6 @@
+.container {
+	height: 170px;
+	margin-top: -$header-nav-height;
+	background-color: $gray-200;
+	@include fadeIn();
+}

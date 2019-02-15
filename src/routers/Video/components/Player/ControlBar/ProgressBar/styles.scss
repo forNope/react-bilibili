@@ -1,0 +1,74 @@
+.progress {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1;
+	height: 100%;
+
+	@include user-select(none);
+
+	.scale {
+		position: absolute;
+		width: 14px;
+		height: 100%;
+		visibility: hidden;
+		transform: translateX(-50%);
+
+		.bottom-arrow {
+			@include arrow(bottom, 7px, $primary-light);
+
+			position: absolute;
+			top: 0;
+		}
+
+		.top-arrow {
+			@include arrow(top, 7px, $primary-light);
+
+			position: absolute;
+			bottom: 0;
+		}
+
+		.content {
+			position: absolute;
+			width: 40px;
+			height: 20px;
+			line-height: 20px;
+			text-align: center;
+			border-radius: $border-radius-sm;
+			bottom: 100%;
+
+			@extend %horizontally-center;
+
+			margin-bottom: 2px;
+			background-color: $gray-200;
+		}
+
+		img {
+			position: absolute;
+			width: 180px;
+			height: 120px;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, -100%);
+			z-index: -1;
+			pointer-events: none;
+		}
+	}
+
+	.seek, .time-progress {
+		width: 90px;
+		height: 20px;
+		line-height: 20px;
+		text-align: center;
+		color: $gray-600;
+
+		@include remove-focus-outline;
+		@include user-select(none);
+	}
+
+	.seek {
+		&:focus {
+			border: 1px solid $gray-700;
+		}
+	}
+}

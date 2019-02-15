@@ -1,0 +1,15 @@
+.qr-container {
+	position: absolute;
+	width: 260px;
+	height: 170px;
+	left: -21px;
+	background: url('./assets/orcode-frame.png') no-repeat;
+
+	.qr-code {
+		width: 96px;
+		height: 96px;
+		transform: translate(82px, 32px);
+		background: url('./assets/qrcode.png') no-repeat;
+	}
+}
+

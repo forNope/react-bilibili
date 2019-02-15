@@ -1,0 +1,16 @@
+{
+	"extends": "./base.json",
+	"compilerOptions": {
+		"module": "commonjs",
+		"target": "es5",
+		"jsx": "react",
+		"noImplicitAny": true,
+		"experimentalDecorators": true,
+		"lib": [
+			"DOM",
+			"es6",
+			"esnext"
+		],
+		"allowJs": true
+	}
+}

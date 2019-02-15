@@ -1,0 +1,11 @@
+.container {
+	width: 30px;
+	height: 100%;
+	@include border-top-radius($border-radius);
+	background-color: $gray-100;
+	cursor: pointer;
+
+	&.disable {
+		pointer-events: none;
+	}
+}

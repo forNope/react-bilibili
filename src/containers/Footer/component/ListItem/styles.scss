@@ -1,0 +1,15 @@
+.item {
+	width: 100px;
+	float: left;
+	margin-bottom: 10px;
+	white-space: nowrap;
+
+	a {
+		font-size: $font-size-base;
+		transition: color 0.3s;
+	}
+
+	&:hover a {
+		color: $primary;
+	}
+}

@@ -1,0 +1,85 @@
+%icon1 {
+  display: block;
+  background-image: resolve("assets/icons.png");
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+%icon-sm {
+  @extend %icon1;
+
+  width: 30px;
+  height: 28px;
+}
+
+$arrow-color: skyblue;
+$arrow-size: 5px;
+
+%arrow {
+  position: relative;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: $arrow-size solid transparent;
+  transition: all .2s;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: ($arrow-size - 3) solid transparent;
+  }
+}
+
+%bottom-arrow {
+  @extend %arrow;
+
+  border-top-color: $arrow-color;
+  border-bottom: none;
+
+  &:before {
+    border-top-color: white;
+    top: -$arrow-size;
+    left: -($arrow-size - 3);
+  }
+}
+
+%right-arrow {
+  @extend %arrow;
+
+  border-left-color: $arrow-color;
+  border-right: none;
+
+  &:before {
+    border-left-color: white;
+    left: -$arrow-size;
+    top: -($arrow-size - 3);
+  }
+}
+
+%left-arrow {
+  @extend %arrow;
+
+  border-right-color: $arrow-color;
+  border-left: none;
+
+  &:before {
+    border-right-color: white;
+    right: -$arrow-size;
+    top: -($arrow-size - 3);
+  }
+}
+
+%up-arrow {
+  @extend %arrow;
+
+  border-bottom-color: $arrow-color;
+  border-top: none;
+
+  &:before {
+    border-bottom-color: white;
+    bottom: -$arrow-size;
+    left: -($arrow-size - 3);
+  }
+}

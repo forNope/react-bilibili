@@ -1,0 +1,39 @@
+$height: 28px;
+
+.container {
+	height: $height;
+
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		width: 4px;
+		height: 4px;
+		border-radius: $border-radius-full;
+		@extend %vertically-center;
+		left: 25px;
+		background-color: $gray-700;
+	}
+
+	&:hover .text.link {
+		color: $primary;
+	}
+
+	.box {
+		display: flex;
+		height: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.text {
+		flex: 1;
+		@include ellipsis();
+		color: $gray-600;
+		transition: color 0.3s;
+
+		&.link {
+			color: black;
+		}
+	}
+}

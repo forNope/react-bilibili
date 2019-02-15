@@ -1,0 +1,9 @@
+.slide {
+	position: absolute;
+	height: 25px;
+	width: 100%;
+	bottom: 0;
+	transition: bottom 0.2s;
+	color: $gray-600;
+	background-color: white;
+}

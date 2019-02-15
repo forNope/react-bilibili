@@ -1,0 +1,19 @@
+.title-box {
+	margin: 10px 0;
+	overflow: hidden;
+
+	.title {
+		margin-left: 10px;
+		color: $gray-600;
+	}
+
+	.split {
+		display: inline-block;
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		margin-left: 6px;
+		@extend %vertically-center;
+		background-color: $gray-400;
+	}
+}

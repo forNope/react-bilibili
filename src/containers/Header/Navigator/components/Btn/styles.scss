@@ -1,0 +1,25 @@
+$height: 24px;
+
+.container {
+	display: block;
+	width: 100%;
+	height: $height;
+	line-height: $height;
+	text-align: center;
+	border-radius: $border-radius;
+	background-color: $gray-300;
+
+	&:hover {
+		background-color: $gray-500;
+	}
+
+	.icon {
+		display: inline-block;
+		width: 11px;
+		height: 11px;
+		vertical-align: middle;
+		margin-left: 4px;
+		margin-bottom: 2px;
+		background: resolve("assets/icons.png") no-repeat -478px -218px;
+	}
+}

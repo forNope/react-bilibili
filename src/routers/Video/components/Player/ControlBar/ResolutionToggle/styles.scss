@@ -1,0 +1,15 @@
+.resolution {
+	width: 45px;
+	height: 100%;
+	line-height: 24px;
+	text-align: center;
+	color: $gray-600;
+	cursor: pointer;
+}
+
+.list {
+	width: 200%;
+	.item:hover {
+		background-color: $gray-200;
+	}
+}

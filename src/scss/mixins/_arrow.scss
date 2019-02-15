@@ -1,0 +1,23 @@
+@mixin arrow($direction: top, $size: 5px, $color: skyblue) {
+	$contrast-direction: none;
+
+	@if $direction == top {
+		$contrast-direction: bottom;
+	} @else if $direction == bottom {
+		$contrast-direction: top;
+	} @else if $direction == left {
+		$contrast-direction: right;
+	} @else if $direction == right {
+		$contrast-direction: left;
+	} @else {
+		@error "arrow direction only support {top, right, bottom, left}";
+	}
+
+	display: inline-block;
+	position: relative;
+	width: 0;
+	height: 0;
+	border: $size solid transparent;
+	border-#{$contrast-direction}-color: $color;
+	border-#{$direction}: none;
+}

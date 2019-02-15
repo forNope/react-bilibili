@@ -1,0 +1,46 @@
+.container {
+	position: relative;
+	transition: color 0.3s;
+	font-size: $font-size-sm;
+	border-bottom: 1px solid transparent;
+	margin: 0 6px -8px;
+	padding-bottom: 8px;
+	cursor: pointer;
+	color: $black;
+
+	&:hover {
+		color: $primary;
+	}
+
+	&.on {
+		border-bottom-color: $primary;
+		color: $primary;
+
+		&:before {
+			@extend %visible;
+		}
+	}
+
+	&:before {
+		content: '';
+
+		@extend %hidden;
+
+		position: absolute;
+		width: 0;
+		height: 0;
+
+		@extend %horizontally-center;
+
+		bottom: 0;
+
+		@include transition($transition-base);
+
+		border: 3px solid $primary;
+		border-top: none;
+		border: {
+			left-color: transparent;
+			right-color: transparent;
+		}
+	}
+}

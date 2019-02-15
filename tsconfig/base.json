@@ -1,0 +1,40 @@
+{
+	"compilerOptions": {
+		"alwaysStrict": true,
+		"removeComments": true,
+		"sourceMap": true,
+		"baseUrl": "../src",
+		"paths": {
+			"@helps/*": [
+				"helps/*"
+			],
+			"@mixins/*": [
+				"mixins/*"
+			],
+			"@assets/*": [
+				"assets/*"
+			],
+			"@components/*": [
+				"components/*"
+			],
+			"@containers/*": [
+				"containers/*"
+			],
+			"@patterns/*": [
+				"patterns/*"
+			],
+			"@homeComponents/*": [
+				"routers/Home/components/*"
+			],
+			"@videoComponents/*": [
+				"routers/Video/components/*"
+			]
+		}
+	},
+	"include": [
+		"../src/**/*"
+	],
+	"exclude": [
+		"../node_modules"
+	]
+}

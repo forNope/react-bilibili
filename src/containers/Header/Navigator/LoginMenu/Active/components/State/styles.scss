@@ -1,0 +1,9 @@
+.state {
+	vertical-align: top;
+	margin-left: 20px;
+	color: $gray-600;
+
+	&.active {
+		color: $pink;
+	}
+}

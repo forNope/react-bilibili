@@ -1,0 +1,76 @@
+$middle-device: 980px;
+$large-device: 1400px;
+
+%hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+
+%visible {
+	opacity: 1;
+	visibility: visible;
+}
+
+%stretch-full {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+%app-wrapper {
+	position: relative;
+	margin: 0 auto;
+
+	@media (max-width: $large-device) {
+		width: $middle-device;
+	}
+
+	@media (min-width: $large-device) {
+		width: $large-device - 40;
+	}
+}
+
+%border-radius {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+%horizontally-center {
+	@include transform(translateX(-50%));
+
+	left: 50%;
+}
+
+%vertically-center {
+	@include transform(translateY(-50%));
+
+	top: 50%;
+}
+
+%all-center {
+	position: absolute;
+
+	@include transform(translate(-50%, -50%));
+
+	top: 50%;
+	left: 50%;
+}
+
+%align-right {
+	@include transform(translateX(-100%));
+
+	left: 100%;
+}
+
+%fr {
+	float: right;
+}
+
+%fl {
+	float: left;
+}

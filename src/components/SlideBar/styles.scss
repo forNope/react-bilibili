@@ -1,0 +1,149 @@
+.slide-bar {
+	$nav-point-size: 15px;
+	$loaded-bar-size: 6px;
+	// let the nav-point center to the loaded-bar
+	$center-position: -($nav-point-size - $loaded-bar-size) / 2;
+	
+	cursor: pointer;
+
+	&:hover .scale {
+		visibility: visible;
+	}
+
+	&.disable {
+		opacity: 0.5;
+		pointer-events: none;
+		cursor: default;
+	}
+
+	&.is-drag:hover .scale {
+		visibility: hidden;
+	}
+
+	.inner {
+		position: absolute;
+		@extend %all-center;
+		background-color: $gray-300;
+		z-index: 999;
+
+		&, .loaded, .buffered {
+			border-radius: $border-radius-lg;
+		}
+
+		.loaded, .buffered {
+			position: absolute;
+			left: 0;
+			background-color: $primary;
+		}
+
+		.loaded {
+			z-index: 9;
+		}
+
+		.buffered {
+			transition: width 1s, height 1s;
+			opacity: 0.5;
+			z-index: 8;
+		}
+
+		&.horizontal {
+			width: 100%;
+			height: $loaded-bar-size;
+
+			.loaded, .buffered {
+				@extend %vertically-center;
+				height: 100%;
+			}
+
+			.nav-point {
+				top: $center-position;
+				z-index: 999;
+			}
+
+			.scale {
+				@extend %all-center;
+
+				.top-arrow {
+					bottom: 2px;
+				}
+
+				.bottom-arrow {
+					top: 2px;
+				}
+			}
+		}
+
+		&.vertical {
+			width: $loaded-bar-size;
+			height: 100%;
+
+			.loaded, .buffered {
+				width: 100%;
+				bottom: 0;
+			}
+
+			.nav-point {
+				left: $center-position;
+				bottom: 0;
+			}
+		}
+	}
+
+	.nav-point {
+		position: absolute;
+		width: $nav-point-size;
+		height: $nav-point-size;
+		border: 0.5px solid $primary-light;
+		border-radius: $border-radius-full;
+		background-color: $white;
+		z-index: 99;
+
+		&:hover ~ .scale {
+			visibility: hidden;
+		}
+	}
+
+	.scale {
+		position: absolute;
+		width: 14px;
+		height: 24px;
+		visibility: hidden;
+
+		.bottom-arrow {
+			@include arrow(bottom, 7px, $primary-light);
+			position: absolute;
+		}
+
+		.top-arrow {
+			@include arrow(top, 7px, $primary-light);
+			position: absolute;
+		}
+
+		.content {
+			position: absolute;
+			width: 40px;
+			height: 20px;
+			line-height: 20px;
+			text-align: center;
+			border-radius: $border-radius-sm;
+			bottom: 100%;
+			@extend %horizontally-center;
+			margin-bottom: 2px;
+			background-color: $gray-200;
+			z-index: 999;
+		}
+
+		.preview {
+			display: block;
+			position: absolute;
+			width: 160px;
+			height: 92px;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, -100%);
+			background-repeat: no-repeat;
+			pointer-events: none;
+			z-index: 99;
+		}
+	}
+}

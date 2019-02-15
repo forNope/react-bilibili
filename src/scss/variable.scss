@@ -1,0 +1,225 @@
+//default color part
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$gray-light: #e5e9ef;
+$gray-dark: #ccd0d7;
+$black: #000 !default;
+
+$gray-white: rgba(255, 255, 255, 0.4);
+$dark-light-sm: rgba(0, 0, 0, 0.4);
+$dark-light-base: rgba(0, 0, 0, 0.6);
+$dark-light-lg: rgba(0, 0, 0, 0.8);
+$gradient-dark: linear-gradient(transparent, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0.2) 35%, rgba(0, 0, 0, 0.6) 65%, rgba(0, 0, 0, 0.9));
+
+$blue: #007bff !default;
+$blue-light: #36a6ff !default;
+$blue-dark: #00a1d6 !default;
+$indigo: #6610f2 !default;
+$purple: #6f42c1 !default;
+$pink: #f25d8e !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #28a745 !default;
+$teal: #20c997 !default;
+$cyan: #17a2b8 !default;
+
+$primary: #00a1d6 !default;
+$primary-dark: $primary !default;
+$primary-light: #00b5e5 !default;
+$secondary: $gray-600 !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$light: $gray-100 !default;
+$dark: $gray-800 !default;
+
+$transparent-dark: rgba(0, 0, 0, 0.4);
+$transparent-white: rgba(255, 255, 255, 0.9);
+
+//font part
+
+$font-size-base: 14px !default;
+$font-size-sm: 12px !default;
+$font-size-lg: 16px !default;
+
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+
+//transition part
+
+$transition-base: all 0.3s linear !default;
+$transition-fade: opacity 0.2s linear !default;
+$transition-emerge: top 0.3s linear !default;
+$transition-gradient: background-color 0.3s linear !default;
+$transition-color: color 0.2s linear !default;
+
+//border box part
+
+$border-radius: 4px !default;
+$border-radius-sm: 2px !default;
+$border-radius-lg: 6px !default;
+$border-radius-full: 50% !default;
+
+// box shadow part
+
+// only bottom shadow
+// why it can be work?
+// forth arg is shadow size, when it < 0, the shadow will inset to element
+// so set the offset-y > 0 , -shadow size > offset-x + 1, and - shadow size >= blur degree
+$bottom-box-shadow: 0 4px 3px -3px rgba(0, 0, 0, 3) !default;
+$left-bottom-box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.2) !default;
+$left-box-shadow: 0 0 1px 2px $transparent-dark !default;
+$right-bottom-box-shadow: 0 2px 4px rgba(0, 0, 0, .16) !default;
+
+// link part
+$link-color: black !default;
+$link-decoration: none !default;
+
+//filter
+$blur: blur(4px);
+
+$icons: url("/src/assets/icons.png");
+$icons2: url("/src/assets/icons2.png");
+$new-icon: url("/src/assets/up-new-iocn.png");
+
+$watch-later-image: url("/src/assets/watchLater.png");
+$header-ground-image: url("/src/assets/headerGround.png");
+$header-logo-image: url("/src/assets/headerLogo.png");
+$qr-container-image: url("/src/assets/orcode-frame.png");
+$default-avatar-image: url("/src/assets/akari.jpg");
+$danmu-ground-image: url("/src/assets/danmuGround.png");
+
+//navigator part
+$header-nav-height: 42px;
+
+//watch later part
+$watch-later-width: 22px;
+$watch-later-height: 22px;
+
+//relative bottom right offset
+$watch-later-offset-x: 4px;
+$watch-later-offset-y: 5px;
+$watch-later-bg: $watch-later-image no-repeat;
+
+//watch tip part, when hover in btn it will appear
+$watch-later-title-width: 60px;
+$watch-later-title-height: 25px;
+$watch-later-title-offset-y: -($watch-later-height + 5);
+$watch-later-title-bg: $dark-light-lg;
+$watch-later-title-color: white;
+
+//title part
+$carousel-component-title-height: 35px;
+$carousel-component-title-padding: 0 0 0 20px;
+$carousel-component-title-font-size: $font-size-lg;
+$carousel-component-title-bg: $dark-light-base;
+$carousel-component-title-color: white;
+
+//switch photo trigger button part
+$carousel-component-trig-width: 10px;
+$carousel-component-trig-height: 10px;
+$carousel-component-trig-offset-x: 10px;
+$carousel-component-trig-offset-y: 10px;
+$carousel-component-trig-margin: 0 0 0 10px;
+$carousel-component-trig-border-radius: 10px;
+$carousel-component-trig-bg: $white;
+
+/*
+* zone Header component
+*/
+
+$zone-header-height: 40px;
+
+$zone-header-name-font-size: 24px;
+$zone-header-name-margin-x: 10px;
+
+$zone-header-link-font-size: $font-size-sm;
+$zone-header-link-transition: $transition-color;
+$zone-header-link-color: #6d757a;
+$zone-header-link-hover-color: $primary;
+
+//fire icon part
+$zone-header-fire-width: 14px;
+$zone-header-fire-height: $zone-header-fire-width;
+$zone-header-fire-margin-x: 5px;
+$zone-header-fire-bg: $icons no-repeat -665px -1113px;
+
+//when point to the part it will have's style
+//
+// this part is underscore
+$zone-header-on-width: 100%;
+$zone-header-on-height: 2px;
+$zone-header-on-offset-y: -7px;
+$zone-header-on-transition: $transition-fade;
+$zone-header-on-color: $primary;
+$zone-header-on-bg: $primary;
+
+//this part is arrow
+//px is arrow size, $primary is arrow color
+$zone-header-on-arrow-border: 5px solid $primary;
+$zone-header-on-arrow-offset-y: $zone-header-on-offset-y;
+
+//this is a option
+//when the $enable-zone-Header-on-arrow-center is false
+//this option will become effective
+$zone-header-on-arrow-offset-x: 0;
+
+//arrow decoration controller, options {up, right, down, left}
+$zone-header-on-arrow-decoration: up;
+
+//is center ? true or not
+$enable-zone-header-on-arrow-center: true;
+
+//zone Header animation schedule part
+$zone-header-ani-schedule-height: 36px;
+$zone-header-ani-schedule-padding: 0 3px 0 10px;
+$zone-header-ani-schedule-font-size: $font-size-base;
+$zone-header-ani-schedule-border: 2px solid $pink;
+$zone-header-ani-schedule-border-radius: $border-radius;
+$zone-header-ani-schedule-transition: $transition-base;
+$zone-header-ani-schedule-hover-bg: $pink;
+$zone-header-ani-schedule-color: $pink;
+$zone-header-ani-schedule-hover-color: $white;
+$zone-header-ani-schedule-icon-hover-bg-pos: -541px -218px;
+
+//ani schedule icon part
+$zone-header-ani-schedule-icon-width: 12px;
+$zone-header-ani-schedule-icon-height: 13px;
+$zone-header-ani-schedule-icon-margin-x: 6px;
+$zone-header-ani-schedule-icon-bg: $icons no-repeat -478px -281px;
+
+//zone more button part
+//
+//whole button's margin x
+$zone-header-more-width: 52px;
+$zone-header-more-margin-x: 5px;
+
+//button inner elements transition
+$zone-header-more-inner-transition: margin 0.15s;
+
+//more button's text part
+$zone-header-more-text-margin-x: 10px;
+$zone-header-more-text-hover-margin-x: $zone-header-more-text-margin-x - 3;
+
+//more button's icon part
+$zone-header-more-icon-width: 12px;
+$zone-header-more-icon-height: 13px;
+$zone-header-more-icon-margin-x: 0px;
+$zone-header-more-icon-transition: $transition-base;
+$zone-header-more-icon-bg: $icons no-repeat -478px -218px;
+
+//when mouse hovering, the icon and text's margin-x;
+$zone-header-more-icon-hover-margin-x: 4px;

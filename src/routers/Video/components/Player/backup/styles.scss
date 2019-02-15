@@ -1,0 +1,17 @@
+.player {
+	width: 680px;
+	height: auto;
+	margin-top: 46px;
+
+	video {
+		width: 100%;
+		height: 440px;
+		object-fit: fill;
+	}
+}
+
+.notice-pos {
+	position: absolute;
+	top: 0;
+	transform: translateY(-100%);
+}

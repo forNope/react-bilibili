@@ -1,0 +1,14 @@
+.zone-rank-more {
+	display: block;
+	width: 100%;
+	height: 26px;
+	line-height: 26px;
+	border-radius: $border-radius-lg;
+	@include transition($transition-gradient);
+	text-align: center;
+	background-color: $gray-400;
+
+	&:hover {
+		background-color: $gray-500;
+	}
+}

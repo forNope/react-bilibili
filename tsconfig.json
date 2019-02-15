@@ -1,0 +1,37 @@
+{
+	"compilerOptions": {
+		"lib": [
+			"dom",
+			"esnext",
+			"es2016",
+			"es2016.array.include"
+		],
+		"baseUrl": "src",
+		"paths": {
+			"@helps/*": [
+				"helps/*"
+			],
+			"@mixins/*": [
+				"mixins/*"
+			],
+			"@assets/*": [
+				"assets/*"
+			],
+			"@components/*": [
+				"components/*"
+			],
+			"@containers/*": [
+				"containers/*"
+			],
+			"@patterns/*": [
+				"patterns/*"
+			],
+			"@homeComponents/*": [
+				"routers/Home/components/*"
+			],
+			"@videoComponents/*": [
+				"routers/Video/components/*"
+			]
+		}
+	}
+}

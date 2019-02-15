@@ -1,0 +1,13 @@
+.split {
+	margin: 20px;
+	border-top: 1px solid $gray-600;
+
+	.tag {
+		position: absolute;
+		width: 70px;
+		text-align: center;
+		@extend %all-center;
+		color: $gray-600;
+		background-color: $white;
+	}
+}

@@ -1,0 +1,44 @@
+.tab {
+  @extend %link;
+
+  position: relative;
+
+  @include transition($transition-base);
+
+  border-bottom: 1px solid transparent;
+  margin: 0 6px -8px;
+  padding-bottom: 8px;
+  cursor: pointer;
+
+  &.on {
+    border-bottom-color: $primary;
+    color: $primary;
+
+    &:before {
+      @extend %visible;
+    }
+  }
+
+  &:before {
+    content: '';
+
+    @extend %hidden;
+
+    position: absolute;
+    width: 0;
+    height: 0;
+
+    @extend %horizontally-center;
+
+    bottom: 0;
+
+    @include transition($transition-base);
+
+    border: 3px solid $primary;
+    border-top: none;
+    border: {
+      left-color: transparent;
+      right-color: transparent;
+    };
+  }
+}

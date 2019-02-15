@@ -1,0 +1,339 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
+    <meta name="keywords" content="bilibili,影视,动漫">
+    <meta name="description" content="二次元,同志交友网站">
+    <title>bilibili</title>
+    <link rel="stylesheet" href="stylesheets/index.css">
+</head>
+<body>
+<div id="app">
+    <div id="header">
+        <div class="header">
+            <!--导航条-->
+            <div class="nav-menu">
+                <!--阴影-->
+                <div class="mask"></div>
+                <!--毛玻璃-->
+                <div class="blur"></div>
+                <!--导航条内容-->
+                <div class="app-wrapper">
+                    <!--头部导航栏-->
+                    <div class="nav">
+                        <ul>
+                            <li class="home item"><a href="#home"><i class="bilibili-icon"></i>主站</a></li>
+                            <li class="item"><a href="#draw">画友</a></li>
+                            <li class="item"><a href="#game">游戏中心</a></li>
+                            <li class="item"><a href="#">直播</a></li>
+                            <li class="item"><a href="#">会员购</a></li>
+                            <li class="item"><a href="#">周边</a></li>
+                            <li class="item">
+                                <a href="#">移动端</a>
+                                <div class="qr reel"></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--up主上传按钮-->
+                    <div class="upload">
+                        <a class="item" href="#">投 稿</a>
+                        <i class="new-icon"></i>
+                    </div>
+
+                    <!--检查登陆状态后渲染相应的选项-->
+                    <div class="login-menu">
+                        <ul>
+                            <li class="login">
+                                <a class="avatar" href="#login">
+                                    <img src="../assets/akari.jpg">
+                                </a>
+                                <div class="tip-box emerge">
+                                   <div>
+                                       <p class="tip">登陆后你可以:</p>
+                                       <div class="film">
+                                           <div class="pic">
+                                               <img src="../assets/danmu.png" alt="danmu">
+                                               <img src="../assets/danmu.png" alt="danmu">
+                                           </div>
+                                       </div>
+                                       <a class="login-btn" href="#login">登陆</a>
+                                       <p class="reg">首次使用？<a href="#register">点我去注册</a></p>
+                                   </div>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <a href="#history">历史</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--头部横幅-->
+            <div class="banner">
+                <div class="app-wrapper">
+                    <a class="logo" href="#home"></a>
+
+                    <a class="title fade" href="#link">bilibili干杯🍻</a>
+
+                    <div class="search-container fr">
+                        <a href="#" class="rank">
+                            <span>排行榜</span>
+                        </a>
+                        <form class="search-bar" action="#" method="get">
+                            <input type="text">
+                            <input type="submit" value="">
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!--分区菜单-->
+            <div class="part-menu app-wrapper">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="home-icon"></i>
+                            <div class="nav-name">首页</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="#">
+                            <div class="nav-wrap">
+                                <span class="num">122+</span>
+                            </div>
+                            <div class="nav-name">动画</div>
+                        </a>
+                        <!--二级菜单-->
+                        <ul class="sub-nav">
+                            <li><a href="#"><i class="right-arrow"></i>MAD·AMV <i class="left-arrow"></i></a></li>
+                            <li><a href="#"><i class="right-arrow"></i>MMD·3D<i class="left-arrow"></i></a></li>
+                            <li><a href="#"><i class="right-arrow"></i>短片·手书·配音<i class="left-arrow"></i></a></li>
+                            <li><a href="#"><i class="right-arrow"></i>综合<i class="left-arrow"></i></a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="#">
+                            <div class="nav-wrap">
+                                <span class="num">9999</span>
+                            </div>
+                            <div class="nav-name">番剧</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="#">
+                            <div class="nav-wrap">
+                                <span class="num">10</span>
+                            </div>
+                            <div class="nav-name">国创</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="#">
+                            <div class="nav-wrap">
+                                <span class="num">5</span>
+                            </div>
+                            <div class="nav-name">音乐</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="#">
+                            <div class="nav-wrap">
+                                <span class="num">--</span>
+                            </div>
+                            <div class="nav-name">舞蹈</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="#">
+                            <div class="nav-wrap">
+                                <span class="num">--</span>
+                            </div>
+                            <div class="nav-name">游戏</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="#">
+                            <div class="nav-wrap">
+                                <span class="num">--</span>
+                            </div>
+                            <div class="nav-name">科技</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="#">
+                            <div class="nav-wrap">
+                                <span class="num">--</span>
+                            </div>
+                            <div class="nav-name">生活</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="#">
+                            <div class="nav-wrap">
+                                <span class="num">--</span>
+                            </div>
+                            <div class="nav-name">鬼畜</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="#">
+                            <div class="nav-wrap">
+                                <span class="num">--</span>
+                            </div>
+                            <div class="nav-name">时尚</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="#">
+                            <div class="nav-wrap">
+                                <span class="num">--</span>
+                            </div>
+                            <div class="nav-name">广告</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="#">
+                            <div class="nav-wrap">
+                                <span class="num">--</span>
+                            </div>
+                            <div class="nav-name">娱乐</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="#">
+                            <div class="nav-wrap">
+                                <span class="num">--</span>
+                            </div>
+                            <div class="nav-name">影视</div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" href="#">
+                            <div class="nav-wrap">
+                                <span class="num">--</span>
+                            </div>
+                            <div class="nav-name">放映厅</div>
+                        </a>
+                    </li>
+
+                    <li class="side-nav">
+                        <a href="#">
+                            <i class="column-icon"></i>
+                            <div class="nav-name">专栏</div>
+                        </a>
+                    </li>
+
+                    <li class="side-nav">
+                        <a href="#">
+                            <i class="square-icon"></i>
+                            <div class="nav-name">广场</div>
+                        </a>
+                    </li>
+
+                    <li class="side-nav">
+                        <a href="#">
+                            <i class="live-icon"></i>
+                            <div class="nav-name">直播</div>
+                        </a>
+                    </li>
+
+                    <li class="side-nav">
+                        <a href="#">
+                            <i class="banned-icon"></i>
+                            <div class="nav-name">小黑屋</div>
+                        </a>
+                    </li>
+                </ul>
+
+                <a class="gif" href="#">
+                    <img src="source/show-tv.gif">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="app-wrapper">
+        <div class="chief-recommend">
+            <div class="carousel-box fl">
+              <div class="loading">正在加载中...</div>
+            </div>
+
+            <div class="recommend-module recommend">
+                <div class="mark-card">
+                    <a href="#video">
+                        <img src="source/card.jpg@160w_100h.jpg" alt="标题" width="160" height="100">
+
+                        <div class="card-mark">
+                            <p class="title">【灯泡】小埋回家路上惨遭不良少年”围堵！她该怎么办!!!</p>
+                            <p class="author">up主: 40mp</p>
+                            <p class="play">播放: 11.4万</p>
+                        </div>
+                    </a>
+
+                    <div class="watch-later-trigger"></div>
+                </div>
+                <div class="mark-card"></div>
+                <div class="mark-card"></div>
+
+                <div class="mark-card"></div>
+                <div class="mark-card"></div>
+                <div class="mark-card"></div>
+                <div class="mark-card"></div>
+                <div class="mark-card"></div>
+                <span class="rec-btn pre">昨日</span>
+                <span class="rec-btn next">一周</span>
+            </div>
+        </div>
+
+        <div class="promotion">
+          <div class="l-content">
+            <header class="zone">
+                <i class="name-icon"></i>
+                <p class="name">推广</p>
+                <a class="link" href="#">测试而已</a>
+            </header>
+
+            <div class="content">
+                <div class="not-mark-card">
+                  <a href="#video">
+                    <img src="source/card.jpg@160w_100h.jpg" alt="">
+                    <p class="title">特殊的文字,点击</p>
+                    <p class="time">01:12</p>
+                    <div class="watch-later-trigger"></div>
+                  </a>
+                </div>
+                <div class="not-mark-card"></div>
+                <div class="not-mark-card"></div>
+                <div class="not-mark-card"></div>
+                <div class="not-mark-card"></div>
+            </div>
+          </div>
+
+          <aside class="r-content"></aside>
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>

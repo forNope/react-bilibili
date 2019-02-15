@@ -1,0 +1,49 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	scroll-behavior: smooth;
+}
+
+body, ul, p {
+	margin: 0;
+	padding: 0;
+}
+
+div, li {
+	position: relative;
+}
+
+li {
+	list-style: none;
+}
+
+a, p, span, div {
+	font-size: $font-size-sm;
+	font-family: $font-family-sans-serif;
+}
+
+input, button {
+	border: 0;
+	color: black;
+	background-color: transparent;
+
+	&:focus {
+		outline: 0;
+	}
+}
+
+input, li, ul, img, button {
+	@include user-select(none);
+
+	&:focus {
+		outline: 0;
+	}
+}
+
+a {
+	//display: block;
+	text-decoration: $link-decoration;
+	color: $black;
+}

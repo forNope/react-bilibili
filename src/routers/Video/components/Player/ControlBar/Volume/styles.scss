@@ -1,0 +1,12 @@
+.volume-bar-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 100px;
+	padding: 3px 0;
+
+	.text {
+		color: $gray-600;
+	}
+}

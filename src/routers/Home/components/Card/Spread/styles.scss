@@ -1,0 +1,23 @@
+.play, .danmu {
+	height: 100%;
+	color: $gray-600;
+
+	.icon {
+		display: inline-block;
+		position: relative;
+		width: 12px;
+		height: 100%;
+		margin-right: 5px;
+		background-image: resolve("icons.png");
+		background-repeat: no-repeat;
+		vertical-align: middle;
+	}
+}
+
+.play .icon {
+	background-position: -282px -85px;
+}
+
+.danmu .icon {
+	background-position: -282px -213px;
+}

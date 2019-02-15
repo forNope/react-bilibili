@@ -1,0 +1,30 @@
+.control-bar {
+	@include display(flex);
+	height: 24px;
+	width: 100%;
+	transition: bottom 0.3s;
+	justify-content: center;
+	align-items: center;
+	box-shadow: $left-box-shadow;
+	background-color: $gray-100;
+	z-index: 999;
+
+	&.full-screen {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		//z-index: 2147483647;
+	}
+}
+
+.hide-control {
+	bottom: -24px !important;
+}
+
+.hide-cursor {
+	cursor: none;
+}
+
+.show-cursor {
+	cursor: auto;
+}

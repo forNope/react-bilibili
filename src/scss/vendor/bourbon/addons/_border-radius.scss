@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+/// Provides a quick method for targeting `border-radius` on both corners on the side of a box.
+///
+/// @param {Number} $radius
+///   List of arguments
+///
+/// @example scss - Usage
+///   .element-one {
+///     @include border-top-radius(5px);
+///   }
+///
+///   .element-two {
+///     @include border-left-radius(3px);
+///   }
+///
+/// @example css - CSS Output
+///   .element-one {
+///     border-top-left-radius: 5px;
+///     border-top-right-radius: 5px;
+///   }
+///
+///   .element-two {
+///     border-bottom-left-radius: 3px;
+///     border-top-left-radius: 3px;
+///   }
+///
+/// @output `border-radius`
+
+@mixin border-top-radius($radius) {
+  @include prefixer(border-top-left-radius, $radius, webkit moz);
+  @include prefixer(border-top-right-radius, $radius, webkit moz);
+}
+
+@mixin border-right-radius($radius) {
+  @include prefixer(border-bottom-right-radius, $radius, webkit moz);
+  @include prefixer(border-top-right-radius, $radius, webkit moz);
+}
+
+@mixin border-bottom-radius($radius) {
+  @include prefixer(border-bottom-left-radius, $radius, webkit moz);
+  @include prefixer(border-bottom-right-radius, $radius, webkit moz);
+}
+
+@mixin border-left-radius($radius) {
+  @include prefixer(border-bottom-left-radius, $radius, webkit moz);
+  @include prefixer(border-top-left-radius, $radius, webkit moz);
+}
+
+@mixin border-radius($radius) {
+  @include prefixer(border-radius, $radius, webkit moz);
+}

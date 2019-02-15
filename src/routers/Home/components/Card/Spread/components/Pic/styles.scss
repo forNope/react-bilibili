@@ -1,0 +1,7 @@
+.pic {
+	background: resolve("assets/bilibili.png") no-repeat center center;
+
+	&, img {
+		border-radius: $border-radius;
+	}
+}

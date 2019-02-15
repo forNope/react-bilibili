@@ -1,0 +1,143 @@
+/**
+  $image-quantity: number 图片数量,
+  $image-stay-time: number 图片停留时间 单位s  // e.g: .3s
+  $image-transition-time: number 切换图片的过渡时间 单位s
+  $back-time: number 回到第一张图片的过渡时间 单位s
+  @return : 返回关键帧列表
+ */
+@function carousel($image-quantity, $image-stay-time, $image-transition-time, $back-time) {
+  //存放动画关键帧属性 如 0% { [property] }
+  $keyframes-list: ();
+
+  //全部图片停留和滚动时间的总和
+  $image-ani-total-time: $image-quantity * $image-stay-time + $image-transition-time;
+
+  //完成一次轮播所需的时间
+  $total-time: $image-ani-total-time + $back-time;
+
+  //全部图片停留和滚动时间在总时间内所占的百分比
+  $image-ani-percentage: ($image-ani-total-time / $total-time) * 100%;
+
+  //切换单个图片时间的所占的百分比
+  $image-transition-percentage: ($image-transition-time / $total-time) * 100%;
+
+  //单个图片动画所占的百分比
+  $single-image-ani-time: ($image-ani-percentage / $image-quantity);
+
+  @for $i from 0 through $image-quantity {
+    //追加关键帧属性
+    //如果i为0,则不减1,使第一个时间段和第二个时间段的偏移量都是0, comma表示使用逗号分隔
+    @if $i == 0 {
+      $keyframes-list: append($keyframes-list, $single-image-ani-time * $i 0 $image-transition-percentage, comma)
+    } @else {
+      $keyframes-list: append($keyframes-list, $single-image-ani-time * $i ($i - 1) * 100% $image-transition-percentage, comma);
+    }
+  }
+  $keyframes-list: append($keyframes-list, $total-time, comma);
+
+  @return $keyframes-list;
+}
+
+@function _judge-direction($direction, $offset) {
+
+  @if $direction == top {
+    $offset: translateY(-$offset);
+  } @else if($direction == right) {
+    $offset: translateX(-$offset);
+  } @else if($direction == bottom) {
+    $offset: translateY($offset);
+  } @else if($direction == left) {
+    $offset: translateX($offset);
+  } @else {
+    @error '方向不可以是top,right,bottom,left之外的值,你输入的值是#{$direction}';
+  }
+
+  @return $offset;
+}
+
+/**
+  $keyframes-list: list 关键帧列表,
+  $name: string 动画名称,
+  $direction: string 动画偏移的方向,
+  $class-name: string 要应用动画的class,
+  effect: 创建轮播动画
+ */
+@mixin carousel-keyframes($keyframes-list, $class-name, $direction: right, $name: carousel-ani) {
+  $list-length: length($keyframes-list);
+  $total-time: nth($keyframes-list, $list-length);
+
+
+
+  @keyframes #{$name} {
+    @each $list in $keyframes-list {
+      //list最后一个存放总时间,当轮询到最后一项时什么都不做
+      @if length($list) == 1 {}
+      @else {
+        //关键帧
+        $keyframe: nth($list, 1);
+        //偏移量
+        $offset: nth($list, 2);
+        //过渡帧
+        $transition-frame: $keyframe + nth($list, 3);
+
+        $_offset: _judge-direction($direction, $offset);
+
+        #{$keyframe} { @include transform($_offset)}
+
+        //当不是第一张和最后一张图片添加过渡帧
+        @if $keyframe > 0% and $offset / 100% != $list-length - 3 {
+          $offset: _judge-direction($direction, $offset + 100);
+          #{$transition-frame} {transform: $offset;}
+        }
+
+      }
+    }
+    //剩余时间用于回到起点
+    to {
+      #{$direction}: 0
+    }
+  }
+
+  .#{$class-name} {
+    position: relative;
+    animation: $name $total-time linear infinite;
+
+  }
+}
+
+
+@mixin carousel-title-keyframes($keyframes-list, $class-name, $transition-func:opacity,$direction: right,$name: carousel-title-ani) {
+  $list-length: length($keyframes-list);
+  @keyframes #{$name} {
+    @each $list in $keyframes-list {
+      //list最后一个存放总时间,当轮询到最后一项时什么都不做
+      @if length($list) == 1 {}
+      @else {
+        //关键帧
+        $keyframe: nth($list, 1);
+        //偏移量
+        $offset: nth($list, 2);
+        //过渡帧
+        $transition-frame: $keyframe + nth($list, 3);
+
+        $_offset: _judge-direction($direction, $offset);
+
+        #{$keyframe} {@include transform($_offset); #{$transition-func}: 1;}
+
+        @if $keyframe > 0% and $offset / 100% != $list-length - 3 {
+          $offset: _judge-direction($direction, $offset + 100);
+          @debug $offset;
+          #{$transition-frame - 0.01} { @include transform($offset); }
+          #{$transition-frame} {@include  transform($offset); #{$transition-func}: 0; }
+          #{$transition-frame + nth($list, 3)} {#{$transition-func}: 1; }
+        }
+      }
+    }
+    to { #{$transition-func}: 0; }
+  }
+
+  .#{$class-name} {
+    position: relative;
+    animation: $name nth($keyframes-list, $list-length) linear infinite;
+  }
+}

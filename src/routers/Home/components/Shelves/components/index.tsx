@@ -1,0 +1,11 @@
+export {Title} from "./Title";
+export {Icon} from "./Icon";
+export {Name} from "./Name";
+export {Link} from "./Link";
+export {Text} from "./Text";
+export {Split} from "./Split";
+export {TabItem} from "./TabItem";
+export {SwitchOpt} from "./SwitchOpt";
+export {Tabs} from "./Tabs";
+export {ActiveQuantity, More, UpdateBtns} from "./Button";
+export {Shelves}from "./Shelves";

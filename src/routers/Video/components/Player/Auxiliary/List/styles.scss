@@ -1,0 +1,85 @@
+.container {
+  overflow: hidden;
+
+  .sort, .item {
+    @include display(flex);
+
+    width: 100%;
+    padding-left: 10px;
+    color: $gray-600;
+    cursor: pointer;
+
+    @include user-select(none);
+
+    .time {
+      flex: 1;
+    }
+
+    .text {
+      flex: 3;
+
+      @include ellipsis(100%);
+    }
+
+    .date {
+      flex: 2;
+      text-align: right;
+      margin-right: 20px;
+    }
+  }
+
+  .sort {
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .item {
+    height: 24px;
+    line-height: 24px;
+
+    &:hover {
+      color: $primary;
+
+      .shield {
+        @extend %visible;
+      }
+
+      .date {
+        @extend %hidden;
+      }
+    }
+
+    &.select {
+      color: $primary;
+      background-color: $gray-400;
+    }
+  }
+
+  .shield {
+    @extend %hidden;
+
+    position: absolute;
+    width: 60px;
+    right: 20px;
+    text-align: center;
+    border: 1px solid $primary;
+    border-radius: $border-radius;
+    color: $primary;
+
+    @include popup(".popup", 40%);
+
+    &:hover {
+      color: white;
+      background-color: $primary;
+    }
+
+    .popup {
+      width: 120px;
+      right: 0;
+      text-align: center;
+      padding: 4px;
+      border-radius: $border-radius;
+      background-color: $transparent-dark;
+    }
+  }
+}

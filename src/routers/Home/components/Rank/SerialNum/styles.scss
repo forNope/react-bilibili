@@ -1,0 +1,17 @@
+.serial {
+	display: inline-block;
+	box-sizing: content-box;
+	min-width: 12px;
+	height: 18px;
+	line-height: 18px;
+	text-align: center;
+	padding: 0 3px;
+	border-radius: $border-radius;
+	font-size: $font-size-sm;
+	background-color: $gray-600;
+	color: white;
+
+	&.hot {
+		background-color: $pink;
+	}
+}

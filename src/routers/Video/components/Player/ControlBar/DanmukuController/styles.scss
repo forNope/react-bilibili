@@ -1,0 +1,115 @@
+.danmuku {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	pointer-events: none;
+	z-index: 9999999;
+}
+
+.detail-controller {
+	width: 232px;
+	height: 184px;
+	padding: 20px;
+}
+
+.opacity-controller, .blocking-controller {
+	user-select: none;
+}
+
+.opacity-controller {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 15px;
+
+	> span {
+		display: block;
+		width: 85px;
+	}
+}
+
+.blocking-controller {
+	display: inline;
+	cursor: pointer;
+
+	> span {
+		margin-right: 12px;
+	}
+
+	> i {
+		display: inline-block;
+		position: absolute;
+		width: 12px;
+		height: 12px;
+		line-height: 14px;
+		top: 0;
+	}
+
+	.uncheck {
+		border: 1px solid $gray-600;
+		border-radius: 2px;
+
+		&:hover {
+			box-shadow: 0 0 2px $gray-600 inset;
+		}
+	}
+}
+
+.forbid-danmu-controller {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 70px;
+	line-height: 70px;
+	margin-top: 5px;
+
+	.forbid-item {
+		flex: 1;
+		height: 100%;
+		user-select: none;
+		cursor: pointer;
+
+		&:hover .forbid-icon {
+			opacity: 1;
+		}
+
+		&.forbidden {
+			.forbid-icon {
+				opacity: 1;
+				color: $pink !important;
+			}
+
+			.forbid-text {
+				color: $gray-600;
+			}
+		}
+	}
+
+	.forbid-icon {
+		position: absolute;
+		width: 24px;
+		height: 24px;
+		line-height: 24px !important;
+		right: 6px;
+		bottom: 8px;
+		transition: opacity 0.3s, color 0.3s !important;
+		opacity: 0;
+		border-radius: 50%;
+		color: $gray-600 !important;
+		background-color: #fff;
+	}
+
+	.forbid-text {
+		width: 100%;
+		transition: color 0.3s;
+		line-height: 0;
+		text-align: center;
+	}
+}
+
+

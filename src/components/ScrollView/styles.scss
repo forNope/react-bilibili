@@ -1,0 +1,16 @@
+.scroll-view {
+  @include display(flex);
+  @include transition($transition-base);
+  @include transform(translateZ(0));
+
+  width: 100%;
+  height: auto;
+  will-change: left;
+  overflow: hidden;
+
+  > div {
+    @include flex(1 1 0);
+
+    top: 0 !important;
+  }
+}

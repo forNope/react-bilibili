@@ -1,0 +1,92 @@
+.container {
+	position: absolute;
+	width: 48px;
+	top: 0;
+	right: -60px;
+	transition: all 0.3s ease;
+	z-index: 9999;
+
+	.icon {
+		display: block;
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		background-image: resolve("assets/icons.png");
+		background-repeat: no-repeat;
+		background-color: transparent;
+	}
+
+	.nav, .back-top {
+		border: 1px solid #e5e9ef;
+		border-radius: $border-radius;
+	}
+
+	.nav {
+		overflow: hidden;
+		cursor: pointer;
+		background-color: #f6f9fa;
+	}
+
+	.item {
+		display: block;
+		width: 100%;
+		height: 32px;
+		line-height: 32px;
+		text-align: center;
+
+		@include transition($transition-base);
+
+		user-select: none;
+
+		&:hover, &.on {
+			// border-color: $primary;
+			color: white;
+			background-color: $primary;
+		}
+	}
+
+	.sort {
+		height: 48px;
+		line-height: 70px;
+
+		&:hover .icon {
+			background-position: -727px -151px;
+		}
+
+		.icon {
+			@extend %horizontally-center;
+
+			top: 5px;
+			background-position: -663px -151px;
+		}
+	}
+
+	.base {
+		width: 60%;
+		height: 13px;
+		border: {
+			left: 1px solid #ddd;
+			right: 1px solid #ddd;
+		}
+	;
+		background-color: $white;
+
+		@extend %horizontally-center;
+	}
+
+	.back-top {
+		width: 100%;
+		height: 50px;
+		cursor: pointer;
+
+		@include transition(none);
+
+		background-position: -648px -72px;
+		background-color: #f6f9fa;
+
+		&:hover {
+			border-color: $primary;
+			background-position: -714px -72px;
+		}
+	}
+}

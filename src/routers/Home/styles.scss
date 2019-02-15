@@ -1,0 +1,14 @@
+.app-wrapper {
+	@extend %app-wrapper;
+}
+
+:global .shelf-card {
+	@include display(flex);
+	flex-wrap: wrap;
+	justify-content: space-between;
+	overflow: hidden;
+
+	[data-role="card"] {
+		margin-bottom: 15px;
+	}
+}

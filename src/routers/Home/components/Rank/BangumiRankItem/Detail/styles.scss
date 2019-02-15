@@ -1,0 +1,83 @@
+.detail {
+	display: none;
+	position: absolute;
+	width: 320px;
+	height: 140px;
+	top: -50px;
+	background-color: white;
+	border-radius: $border-radius-lg;
+	box-shadow: 0 0 4px 1px $dark-light-sm;
+	z-index: 99;
+
+	.top {
+		padding: 10px 0 10px 0;
+		border-bottom: 2px solid $gray-300;
+		@include clearfix;
+
+		img {
+			float: left;
+			width: 72px;
+			height: 72px;
+			border-radius: $border-radius-lg;
+		}
+
+		.info {
+			margin-top: 10px;
+			padding-left: 10px;
+			overflow: hidden;
+		}
+
+		.info-title {
+			vertical-align: middle;
+			height: 14px;
+			overflow: hidden;
+		}
+
+		.info-update {
+			vertical-align: middle;
+			margin-top: 15px;
+			color: $gray-600;
+		}
+	}
+
+	.bottom {
+		width: 100%;
+		padding-top: 15px;
+
+		.play, .danmu, .like {
+			display: inline-block;
+			height: 18px;
+			line-height: 18px;
+			vertical-align: middle;
+
+			.icon {
+				display: inline-block;
+				vertical-align: middle;
+				width: 18px;
+				height: 18px;
+				background-image: resolve("icons.png");
+			}
+
+			.text {
+				display: inline-block;
+				height: 100%;
+			}
+		}
+
+		.danmu, .like {
+			margin-left: 30px;
+		}
+
+		.play .icon {
+			background-position: -278px -88px;
+		}
+
+		.danmu .icon {
+			background-position: -278px -216px;
+		}
+
+		.like .icon {
+			background-position: -278px -216px;
+		}
+	}
+}

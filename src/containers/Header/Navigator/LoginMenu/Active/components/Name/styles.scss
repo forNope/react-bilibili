@@ -1,0 +1,8 @@
+.name {
+	vertical-align: top;
+	@include ellipsis(50%);
+
+	&:hover {
+		color: $primary;
+	}
+}

@@ -1,0 +1,104 @@
+.info {
+  float: left;
+  width: 50%;
+
+  .title, .part-container, .num-container {
+    margin-bottom: 17px;
+  }
+
+  .title {
+    height: 24px;
+    font-size: 18px;
+
+    @include ellipsis;
+  }
+
+  .part-container {
+    width: 100%;
+
+    a, span {
+      display: inline-block;
+      color: $gray-600;
+    }
+
+    a:hover {
+      color: $primary;
+    }
+
+    .create {
+      margin: 0 32px;
+    }
+
+    .complaints {
+      border-radius: $border-radius-sm;
+
+      &:hover {
+        background-color: $gray-300;
+      }
+    }
+  }
+
+  .num-container {
+    @include display(flex);
+
+    width: 100%;
+    height: 25px;
+    align-items: center;
+
+    .icon {
+      @extend %icon1;
+
+      width: 24px;
+      height: 24px;
+      vertical-align: middle;
+    }
+
+    .split {
+      height: 100%;
+      border: 0.4px solid $gray-400;
+    }
+
+    .play, .danmu, .coin, .collection {
+      @include display(flex);
+
+      width: 94px;
+      align-items: center;
+    }
+
+    .play .icon {
+      background-position: -659px -211px;
+    }
+
+    .danmu .icon {
+      background-position: -659px -276px;
+    }
+
+    .coin, .collection {
+      width: auto;
+
+      .text:nth-of-type(1) {
+        margin-left: 45px;
+      }
+    }
+
+    .coin .icon, .collection .icon {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background-position: 0px 0px;
+      z-index: -1;
+    }
+
+    .coin .icon {
+      background-image: url("./assets/anim-coin-small.png");
+    }
+
+    .collection .icon {
+      background-image: url("./assets/anim-collect.png");
+    }
+
+    .text {
+      margin: 0 5px;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+	"server": {
+		"input": "./src/server.tsx",
+		"output": "./static/server.js"
+	}
+}

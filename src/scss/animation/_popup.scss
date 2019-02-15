@@ -1,0 +1,16 @@
+@mixin popup($className, $from: 0) {
+  &:hover #{$className} {
+    @extend %visible;
+
+    bottom: 100%;
+  }
+
+  #{$className} {
+    @extend %hidden;
+
+    position: absolute;
+    bottom: $from;
+
+    @include transition(bottom 0.2s cubic-bezier(0.7, 0, 1, 1), opacity 0.2s cubic-bezier(0.7, 0, 1, 1));
+  }
+}

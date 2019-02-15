@@ -1,0 +1,13 @@
+@mixin fadeIn($time: 0.3s) {
+	[data-ani="fade"] {
+		@include transition(all $time);
+		opacity: 0;
+		visibility: hidden;
+		overflow: hidden;
+	}
+
+	&:hover [data-ani="fade"] {
+		opacity: 1;
+		visibility: visible;
+	}
+}

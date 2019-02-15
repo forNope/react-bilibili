@@ -1,0 +1,75 @@
+.container {
+	padding-bottom: 5px;
+	border-bottom: 2px solid $gray-200;
+}
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 10px 0;
+
+	> li {
+		flex: 1;
+	}
+}
+
+.item {
+	a:target {
+		color: blue;
+	}
+
+	&:hover [data-role="sub-nav"] {
+		display: block;
+	}
+}
+
+.num-box {
+	width: 100%;
+	height: 28px;
+	text-align: center;
+}
+
+.icon {
+	@extend %icon-sm;
+	@extend %horizontally-center;
+	position: absolute;
+}
+
+.name {
+	text-align: center;
+}
+
+.num {
+	@include ellipsis();
+	display: inline-block;
+	max-width: 31px;
+	line-height: 14px;
+	margin-top: 6px;
+	padding: 1px 3px;
+	// browser minimum font size is 12px, use scale narrow it
+	@include transform(scale(0.85));
+	@include border-radius($border-radius);
+	background-color: pink;
+	color: $white;
+}
+
+.home-icon {
+	background-position: -657px -1171px;
+}
+
+.column-icon {
+	background-position: -82px -1810px;
+}
+
+.square-icon {
+	background-position: -82px -2004px;
+}
+
+.live-icon {
+	background-position: -82px -1875px;
+}
+
+.banned-icon {
+	background-position: -82px -1940px;
+}

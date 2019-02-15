@@ -1,0 +1,11 @@
+.title {
+	position: absolute;
+	font-size: $font-size-lg;
+	top: 110px;
+	left: 300px;
+	padding: 4px;
+	@include border-radius($border-radius);
+	@include transition($transition-fade);
+	background-color: $transparent-dark;
+	color: $white;
+}

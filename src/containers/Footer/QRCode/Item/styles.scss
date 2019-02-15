@@ -1,0 +1,65 @@
+.container:hover .code-wrapper {
+	@extend %visible;
+}
+
+.icon {
+	display: block;
+	width: 60px;
+	height: 70px;
+	background-image: resolve("icons.png");
+	background-repeat: no-repeat;
+}
+
+.text {
+	width: 60px;
+	text-align: center;
+}
+
+.code-wrapper {
+	@extend %hidden;
+	position: absolute;
+	width: 130px;
+	height: 130px;
+	padding: 15px;
+	transition: opacity 0.3s;
+	top: -140px;
+	left: 31px;
+	@extend %horizontally-center;
+	border: 1px solid gray;
+	background-color: $white;
+
+	&.two {
+		width: 207px;
+		padding-right: 0;
+		left: -126px;
+		transform: none;
+
+		.arrow, .arrow-cover {
+			transform: none;
+			left: 145px;
+		}
+	}
+
+	.arrow, .arrow-cover {
+		position: absolute !important;
+		@extend %horizontally-center;
+	}
+
+	.arrow {
+		bottom: -10px;
+		@include arrow(bottom, 10px, gray);
+	}
+
+	.arrow-cover {
+		bottom: -9px;
+		@include arrow(bottom, 10px, white);
+	}
+
+	.code {
+		display: block;
+		width: 100%;
+		height: 100%;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+}

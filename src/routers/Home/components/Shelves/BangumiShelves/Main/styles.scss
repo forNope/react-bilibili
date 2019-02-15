@@ -1,0 +1,57 @@
+.tab-container {
+	display: inline-block;
+	margin-top: 10px;
+	border-bottom: 1px solid $gray-200;
+}
+
+.tab {
+	width: 75px;
+	height: 30px;
+	text-align: center;
+	font-size: 18px !important;
+	margin: 0 !important;
+	padding-bottom: 0;
+
+	@media (max-width: $large-device) {
+		width: 56px;
+	}
+}
+
+.left-content {
+	margin-right: 20px;
+	overflow-y: auto;
+}
+
+.shedule {
+	position: absolute;
+	width: 88px;
+	height: 36px;
+	line-height: 36px;
+	font-size: 14px;
+	top: 2px;
+	right: 20px;
+	padding: 0 5px;
+	text-align: center;
+	border: 1px solid #f25d8e;
+	border-radius: 4px;
+	color: #f25d8e;
+	background-color: #fff;
+
+	.icon {
+		display: inline-block;
+		width: 12px;
+		height: 12px;
+		margin-left: 5px;
+		vertical-align: middle;
+		background: resolve("icons.png") no-repeat -478px -281px;
+	}
+
+	&:hover {
+		color: $white;
+		background-color: $pink;
+
+		.icon {
+			background-position: -541px -218px;
+		}
+	}
+}

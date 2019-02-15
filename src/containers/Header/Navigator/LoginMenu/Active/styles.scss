@@ -1,0 +1,10 @@
+.container {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+
+	.tabs {
+		text-align: center;
+		margin: 20px 0;
+	}
+}

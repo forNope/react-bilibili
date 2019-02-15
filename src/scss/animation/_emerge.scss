@@ -1,0 +1,20 @@
+@mixin emerge(
+	$top: 0,
+	$offset-y: 20px,
+	$time: 0.3s,
+	$selector: ".") {
+	#{$selector} {
+		position: absolute;
+		transition: all $time;
+		opacity: 0;
+		visibility: hidden;
+		overflow: hidden;
+		top: $top + $offset-y;
+	}
+
+	&:hover #{$selector} {
+		opacity: 1;
+		visibility: visible;
+		top: $top;
+	}
+}

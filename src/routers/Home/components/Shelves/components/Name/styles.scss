@@ -1,0 +1,15 @@
+.name {
+  vertical-align: middle;
+  margin-right: 20px;
+  transition: $transition-color;
+  font-size: 24px;
+  font-weight: 400;
+
+  &.link:hover {
+    color: $primary;
+  }
+}
+
+.small {
+  font-size: 18px;
+}

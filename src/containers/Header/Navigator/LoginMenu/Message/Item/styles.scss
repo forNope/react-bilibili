@@ -1,0 +1,14 @@
+$height: 42px;
+
+.container {
+	display: block;
+	width: 100%;
+	height: $height;
+	line-height: $height;
+	text-align: center;
+
+	&:hover {
+		color: $primary;
+		background-color: $gray-300;
+	}
+}

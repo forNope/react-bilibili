@@ -1,0 +1,43 @@
+.nav {
+	display: none;
+	position: absolute;
+	width: 130px;
+	border-radius: $border-radius-lg;
+	box-shadow: $left-bottom-box-shadow;
+	overflow: hidden;
+	z-index: 99;
+}
+
+.right-arrow {
+	@extend %right-arrow;
+	left: 7px;
+	margin-right: 10px;
+}
+
+.left-arrow {
+	@extend %left-arrow;
+	right: -100px;
+}
+
+.item {
+	width: 100%;
+	line-height: 20px;
+	background-color: $white;
+}
+
+.link {
+	display: block;
+	position: relative;
+	padding: 5px;
+	@include transition($transition-base);
+	overflow: hidden;
+
+	&:hover {
+		padding-left: 10px;
+		background-color: $gray-200;
+
+		.left-arrow {
+			right: -5px;
+		}
+	}
+}

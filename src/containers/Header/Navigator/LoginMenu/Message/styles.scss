@@ -1,0 +1,6 @@
+.container {
+	width: 110px;
+	@include border-bottom-radius($border-radius);
+	box-shadow: $right-bottom-box-shadow;
+	background-color: $white;
+}

@@ -1,0 +1,43 @@
+.container {
+	height: 100%;
+	overflow: hidden;
+
+	&:hover .rec-btn {
+		opacity: 1;
+	}
+}
+
+.card-content {
+	@include display(flex);
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.rec-btn {
+	box-sizing: content-box;
+	display: block;
+	position: absolute;
+	@extend %vertically-center;
+	width: 20px;
+	font-size: $font-size-base;
+	@include transition($transition-fade);
+	background: $dark-light-sm resolve("icons2.png") no-repeat;
+	color: $white;
+	opacity: 0;
+	cursor: pointer;
+	z-index: 999;
+
+	&.pre {
+		padding: 8px 2px 8px 14px;
+		@include border-right-radius($border-radius);
+		background-position: 6px -1215px;
+		left: 0;
+	}
+
+	&.next {
+		padding: 6px 8px 8px 8px;
+		@include border-left-radius($border-radius);
+		background-position: 25px -1267px;
+		right: 0;
+	}
+}

@@ -1,0 +1,19 @@
+.container {
+	overflow: auto;
+	@include border-bottom-radius($border-radius);
+	box-shadow: $right-bottom-box-shadow;
+	@extend %horizontally-center;
+	background-color: $white;
+
+	> div:nth-of-type(2) {
+		overflow-x: hidden;
+	}
+
+	.empty {
+		margin-top: 10px;
+	}
+
+	.btn {
+		margin: 4px 12px 12px;
+	}
+}

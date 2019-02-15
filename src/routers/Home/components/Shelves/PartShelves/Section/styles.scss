@@ -1,0 +1,12 @@
+.tab {
+	margin-left: 12px;
+
+	&:nth-last-of-type(2) {
+		margin-left: 0;
+	}
+}
+
+.overflow-hidden {
+	width: 100%;
+	overflow: hidden;
+}

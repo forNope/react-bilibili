@@ -1,0 +1,34 @@
+@import "../../commonStyles";
+
+.active {
+  @extend %btn;
+
+  @keyframes updating {
+    from {
+      transform: rotate(0);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  &.hidden {
+    @extend %hidden;
+  }
+
+  &.isUpdate .icon {
+    animation: updating 0.3s linear infinite;
+  }
+
+  &:hover .icon {
+    animation: updating 0.3s linear;
+  }
+
+  .icon {
+    @extend %icon;
+
+    margin-right: 5px;
+    background-position: -475px -89px;
+  }
+}

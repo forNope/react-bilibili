@@ -1,0 +1,26 @@
+$offset: 5px;
+
+.text {
+	position: absolute;
+	color: $white;
+
+	&.top-left {
+		top: $offset;
+		left: $offset;
+	}
+
+	&.top-right {
+		top: $offset;
+		right: $offset;
+	}
+
+	&.bottom-left {
+		bottom: $offset;
+		left: $offset;
+	}
+
+	&.bottom-right {
+		bottom: $offset;
+		right: $offset;
+	}
+}

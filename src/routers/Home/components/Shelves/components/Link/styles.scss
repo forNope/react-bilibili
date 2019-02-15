@@ -1,0 +1,20 @@
+.link {
+	@include transition($transition-color);
+	color: $gray-600;
+
+	&:hover {
+		color: $primary;
+	}
+
+	&.offset {
+		margin-left: 40px;
+	}
+
+	.icon {
+		display: inline-block;
+		width: 14px;
+		height: 14px;
+		vertical-align: baseline;
+		background: resolve("icons.png") no-repeat -665px -1113px;
+	}
+}

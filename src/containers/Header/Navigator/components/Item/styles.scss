@@ -1,0 +1,37 @@
+.item {
+	height: 100%;
+	float: left;
+	transition: $transition-gradient;
+
+	.link {
+		display: block;
+		line-height: 42px;
+		padding: 0 12px;
+	}
+
+	.icon {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		vertical-align: middle;
+		margin-right: 2px;
+		background-repeat: no-repeat;
+		background-color: transparent;
+	}
+
+	[data-role="append"] {
+		@extend %hidden;
+		position: absolute;
+		transition: all 0.3s;
+		top: 62px;
+		z-index: 999999;
+	}
+
+	&:hover {
+		[data-role="append"] {
+			@extend %visible;
+			top: 42px;
+		}
+		background-color: $gray-white;
+	}
+}

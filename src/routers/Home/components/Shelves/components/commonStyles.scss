@@ -1,0 +1,29 @@
+%btn {
+  position: relative;
+  height: 24px;
+  padding: 4px 8px;
+  border: 2px solid $gray-400;
+  border-radius: $border-radius;
+
+  @include transition($transition-gradient);
+
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $gray-400;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+%icon {
+  display: inline-block;
+  width: 12px;
+  height: 13px;
+  vertical-align: middle;
+  background-image: resolve("icons.png");
+  background-repeat: no-repeat;
+}

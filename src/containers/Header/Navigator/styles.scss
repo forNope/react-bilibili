@@ -1,0 +1,45 @@
+$header-height: 42px;
+
+.container {
+	height: 42px;
+	z-index: 99;
+
+	.mask {
+		@extend %stretch-full;
+
+		@include box-shadow($bottom-box-shadow);
+
+		background-color: $gray-white;
+	}
+
+	.blur {
+		@extend %stretch-full;
+
+		filter: $blur;
+	}
+}
+
+.upload {
+	width: 58px;
+	height: 48px;
+	float: right;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAAwBAMAAACyDnR9AAAAMFBMVEXUUnzWUn3WUn3VUnzVUnzVUn3UUnzUUnzaU4DfVYTuW4zxXI3VUn3qWYjmWIfkV4UXsS1iAAAACHRSTlMB99aQK5W8mPW6JqwAAACVSURBVDjLxcuhDUJBEEXRa2gAhcVRABKHRVAIghZAISgAFH4mNDArIQRBBSSUAC3wfwG7z2x+9uxmzM0jKe2qR0qe/06K5B6RvYG5hXn/LHMxYch6VXibeHyUqvpV0NufUlX/SlU9K1wUvW1WDwonRW+b1afCREx3zI5lexavshsrUe+MRF3DphgfIMZbgOU028Zz6AD+Td5T0E5DWAAAAABJRU5ErkJggg==) no-repeat;
+
+	.link {
+		width: inherit;
+		height: inherit;
+		font-size: $font-size-base;
+		color: $white;
+		text-align: center;
+	}
+
+	.icon {
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		right: -96%;
+		background: url("./assets/up-new-iocn.png") no-repeat;
+	}
+}

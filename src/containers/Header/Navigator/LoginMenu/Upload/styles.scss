@@ -1,0 +1,6 @@
+.container {
+	width: 360px;
+	right: 0;
+	@include border-bottom-radius($border-radius);
+	background-color: $white;
+}

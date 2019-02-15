@@ -1,0 +1,459 @@
+@font-face {
+	font-family: "bilibili-iconfont";
+	src: url("./bilibili.woff") format("woff");
+	font-weight: bold;
+}
+
+:global {
+	.bilibili-player-icon, .bpui-icon {
+		vertical-align: top;
+		width: 20px;
+		height: 20px;
+		display: inline-block;
+		*display: inline;
+		*zoom: 1
+	}
+
+	.bilibili-player-icon.bilibili-player-icon-arrow-down, .bilibili-player-icon.bpui-icon-arrow-down, .bpui-icon.bilibili-player-icon-arrow-down, .bpui-icon.bpui-icon-arrow-down {
+		position: relative
+	}
+
+	.bilibili-player-icon.bilibili-player-icon-arrow-down:before, .bilibili-player-icon.bpui-icon-arrow-down:before, .bpui-icon.bilibili-player-icon-arrow-down:before, .bpui-icon.bpui-icon-arrow-down:before {
+		width: 0;
+		height: 0;
+		display: block;
+		margin: 0 auto;
+		border-width: 4px 4px 0;
+		border-style: solid;
+		border-color: #99a2aa transparent transparent;
+		position: relative;
+		content: ""
+	}
+
+	.bpui-selectmenu > .bilibili-player-icon.bilibili-player-icon-arrow-down:before, .bpui-selectmenu > .bilibili-player-icon.bpui-icon-arrow-down:before, .bpui-selectmenu > .bpui-icon.bilibili-player-icon-arrow-down:before, .bpui-selectmenu > .bpui-icon.bpui-icon-arrow-down:before {
+		margin-top: 8px
+	}
+
+	.bpui-selectmenu-on > .bilibili-player-icon.bilibili-player-icon-arrow-down:before, .bpui-selectmenu-on > .bilibili-player-icon.bpui-icon-arrow-down:before, .bpui-selectmenu-on > .bpui-icon.bilibili-player-icon-arrow-down:before, .bpui-selectmenu-on > .bpui-icon.bpui-icon-arrow-down:before {
+		border-color: #222 transparent transparent
+	}
+
+	.bilibili-player-icon.bilibili-player-icon-arrow-up, .bilibili-player-icon.bpui-icon-arrow-up, .bpui-icon.bilibili-player-icon-arrow-up, .bpui-icon.bpui-icon-arrow-up {
+		position: relative
+	}
+
+	.bilibili-player-icon.bilibili-player-icon-arrow-up:before, .bilibili-player-icon.bpui-icon-arrow-up:before, .bpui-icon.bilibili-player-icon-arrow-up:before, .bpui-icon.bpui-icon-arrow-up:before {
+		width: 0;
+		height: 0;
+		display: block;
+		margin: 0 auto;
+		border-width: 0 4px 4px;
+		border-style: solid;
+		border-color: transparent transparent #99a2aa;
+		position: relative;
+		content: ""
+	}
+
+	.bilibili-player-icon.bilibili-player-icon-arrow-left, .bilibili-player-icon.bpui-icon-arrow-left, .bpui-icon.bilibili-player-icon-arrow-left, .bpui-icon.bpui-icon-arrow-left {
+		background-image: url(//static.hdslb.com/images/v3images/icons2.png);
+		width: 8px;
+		height: 10px;
+		background-position: 0 -1624px
+	}
+
+	.bilibili-player-iconfont[class*=" icon-"] {
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		font-family: bilibili-iconfont !important;
+		font-style: normal;
+		line-height: inherit;
+		vertical-align: top;
+		-webkit-font-smoothing: antialiased;
+		-webkit-text-stroke-width: .2px;
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-transition: color .3s;
+		transition: color .3s
+	}
+
+	.bilibili-player-iconfont[class*=" icon-24"], .bilibili-player-iconfont[class^=icon-24] {
+		font-size: 24px
+	}
+
+	.bilibili-player-iconfont[class*=" icon-12"], .bilibili-player-iconfont[class^=icon-12] {
+		font-size: 12px
+	}
+
+	.bilibili-player-iconfont[class*=" icon-14"], .bilibili-player-iconfont[class^=icon-14] {
+		font-size: 14px
+	}
+
+	.bilibili-player-iconfont[class*=" icon-16"], .bilibili-player-iconfont[class^=icon-16] {
+		font-size: 16px
+	}
+
+	.bilibili-player-iconfont[class*=" icon-18"], .bilibili-player-iconfont[class^=icon-18] {
+		font-size: 18px
+	}
+
+	.bilibili-player-iconfont[class*=" icon-22"], .bilibili-player-iconfont[class^=icon-22] {
+		font-size: 22px
+	}
+
+	.bilibili-player-iconfont[class*=" icon-32"], .bilibili-player-iconfont[class^=icon-32] {
+		font-size: 32px
+	}
+
+	.bilibili-player-iconfont[class*=" icon-36"], .bilibili-player-iconfont[class^=icon-36] {
+		font-size: 36px
+	}
+
+	.bilibili-player-iconfont[class*=" icon-48"], .bilibili-player-iconfont[class^=icon-48] {
+		font-size: 48px
+	}
+
+	.bilibili-player-iconfont.icon-24color:before {
+		content: "\E600"
+	}
+
+	.bilibili-player-iconfont.icon-24danmucurrent:before {
+		content: "\E601"
+	}
+
+	.bilibili-player-iconfont.icon-24danmuforbid:before {
+		content: "\E602"
+	}
+
+	.bilibili-player-iconfont.icon-24danmuoff:before {
+		content: "\E603"
+	}
+
+	.bilibili-player-iconfont.icon-24danmuon:before {
+		content: "\E604"
+	}
+
+	.bilibili-player-iconfont.icon-24danmusetting:before {
+		content: "\E605"
+	}
+
+	.bilibili-player-iconfont.icon-24exitfullscreen:before {
+		content: "\E606"
+	}
+
+	.bilibili-player-iconfont.icon-24exitwebfull:before {
+		content: "\E607"
+	}
+
+	.bilibili-player-iconfont.icon-24fullscreen:before {
+		content: "\E608"
+	}
+
+	.bilibili-player-iconfont.icon-24pause:before {
+		content: "\E609"
+	}
+
+	.bilibili-player-iconfont.icon-24play:before {
+		content: "\E60A"
+	}
+
+	.bilibili-player-iconfont.icon-24nextepisode:before {
+		content: "\E65C"
+	}
+
+	.bilibili-player-iconfont.icon-24repeatoff:before {
+		content: "\E60B"
+	}
+
+	.bilibili-player-iconfont.icon-24repeaton:before {
+		content: "\E60C"
+	}
+
+	.bilibili-player-iconfont.icon-16repeaton:before {
+		content: "\E661"
+	}
+
+	.bilibili-player-iconfont.icon-24soundlarge:before {
+		content: "\E60D"
+	}
+
+	.bilibili-player-iconfont.icon-24soundoff:before {
+		content: "\E60E"
+	}
+
+	.bilibili-player-iconfont.icon-24soundsmall:before {
+		content: "\E60F"
+	}
+
+	.bilibili-player-iconfont.icon-24webfull:before {
+		content: "\E610"
+	}
+
+	.bilibili-player-iconfont.icon-32coin:before {
+		content: "\E611"
+	}
+
+	.bilibili-player-iconfont.icon-32replay:before {
+		content: "\E612"
+	}
+
+	.bilibili-player-iconfont.icon-32share:before {
+		content: "\E613"
+	}
+
+	.bilibili-player-iconfont.icon-48danmuback:before {
+		content: "\E614"
+	}
+
+	.bilibili-player-iconfont.icon-48danmubottom:before {
+		content: "\E615"
+	}
+
+	.bilibili-player-iconfont.icon-48danmucode:before {
+		content: "\E616"
+	}
+
+	.bilibili-player-iconfont.icon-48danmucolor:before {
+		content: "\E617"
+	}
+
+	.bilibili-player-iconfont.icon-48danmuscroll:before {
+		content: "\E618"
+	}
+
+	.bilibili-player-iconfont.icon-48danmuspe:before {
+		content: "\E619"
+	}
+
+	.bilibili-player-iconfont.icon-48kongjian:before {
+		content: "\E61A"
+	}
+
+	.bilibili-player-iconfont.icon-48qq:before {
+		content: "\E61B"
+	}
+
+	.bilibili-player-iconfont.icon-48tieba:before {
+		content: "\E61C"
+	}
+
+	.bilibili-player-iconfont.icon-48weibo:before {
+		content: "\E61D"
+	}
+
+	.bilibili-player-iconfont.icon-24wideoff:before {
+		content: "\E61E"
+	}
+
+	.bilibili-player-iconfont.icon-24wideon:before {
+		content: "\E61F"
+	}
+
+	.bilibili-player-iconfont.icon-48danmutop:before {
+		content: "\E620"
+	}
+
+	.bilibili-player-iconfont.icon-12blocksetting:before {
+		content: "\E621"
+	}
+
+	.bilibili-player-iconfont.icon-12danmuhistory:before {
+		content: "\E622"
+	}
+
+	.bilibili-player-iconfont.icon-12suggest:before {
+		content: "\E648"
+	}
+
+	.bilibili-player-iconfont.icon-12danmulist:before {
+		content: "\E649"
+	}
+
+	.bilibili-player-iconfont.icon-12delete:before {
+		content: "\E623"
+	}
+
+	.bilibili-player-iconfont.icon-12down:before {
+		content: "\E624"
+	}
+
+	.bilibili-player-iconfont.icon-12left:before {
+		content: "\E625"
+	}
+
+	.bilibili-player-iconfont.icon-12more:before {
+		content: "\E626"
+	}
+
+	.bilibili-player-iconfont.icon-12refresh:before {
+		content: "\E627"
+	}
+
+	.bilibili-player-iconfont.icon-12right:before {
+		content: "\E628"
+	}
+
+	.bilibili-player-iconfont.icon-12select:before {
+		content: "\E629"
+	}
+
+	.bilibili-player-iconfont.icon-12sent:before {
+		content: "\E62A"
+	}
+
+	.bilibili-player-iconfont.icon-12spedanmu:before {
+		content: "\E62B"
+	}
+
+	.bilibili-player-iconfont.icon-12up:before {
+		content: "\E62C"
+	}
+
+	.bilibili-player-iconfont.icon-12close:before {
+		content: "\E62D"
+	}
+
+	.bilibili-player-iconfont.icon-12iconcomment:before {
+		content: "\E62E"
+	}
+
+	.bilibili-player-iconfont.icon-12icondanmu:before {
+		content: "\E631"
+	}
+
+	.bilibili-player-iconfont.icon-12iconfollowed:before {
+		content: "\E632"
+	}
+
+	.bilibili-player-iconfont.icon-12iconplayed:before {
+		content: "\E633"
+	}
+
+	.bilibili-player-iconfont.icon-12selected2:before {
+		content: "\E630"
+	}
+
+	.bilibili-player-iconfont.icon-12danmucurrent2:before, .bilibili-player-iconfont.icon-12danmucurrent:before {
+		content: "\E601"
+	}
+
+	.bilibili-player-iconfont.icon-12checkbox {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		color: #99a2aa;
+		border: 1px solid #99a2aa;
+		display: inline-block;
+		width: 13px;
+		height: 13px;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		vertical-align: top;
+		margin-top: 4px;
+		margin-left: -1px;
+		background-color: #f4f5f7;
+		border-radius: 2px
+	}
+
+	.bilibili-player-iconfont.icon-12checkbox:hover {
+		-webkit-box-shadow: inset 0 0 1px 1px #99a2aa;
+		box-shadow: inset 0 0 1px 1px #99a2aa
+	}
+
+	.bilibili-player-iconfont.icon-48ellipse:before {
+		content: "\E634"
+	}
+
+	.bilibili-player-iconfont.icon-48ellipsering:before {
+		content: "\E635";
+		font-size: 50px
+	}
+
+	.bilibili-player-iconfont.icon-12rankleft:before {
+		content: "\E636"
+	}
+
+	.bilibili-player-iconfont.icon-12rankright:before {
+		content: "\E637"
+	}
+
+	.bilibili-player-iconfont.icon-32blingleft:before {
+		content: "\E639";
+		color: #f6cd15
+	}
+
+	.bilibili-player-iconfont.icon-24blingright:before {
+		content: "\E63A";
+		color: #f6cd15
+	}
+
+	.bilibili-player-iconfont.icon-36head:before {
+		content: "\E638"
+	}
+
+	.bilibili-player-iconfont.icon-24verticaltriangle:before {
+		content: "\E63F"
+	}
+
+	.bilibili-player-iconfont.icon-24verticaltriangle2:before {
+		content: "\E641"
+	}
+
+	.bilibili-player-iconfont.icon-24question:before {
+		content: "\E640";
+		font-size: 20px
+	}
+
+	.bilibili-player-iconfont.icon-24lightning:before {
+		content: "\E63E";
+		font-size: 20px
+	}
+
+	.bilibili-player-iconfont.icon-24triangle1:before {
+		content: "\E642"
+	}
+
+	.bilibili-player-iconfont.icon-24triangle2:before {
+		content: "\E63B"
+	}
+
+	.bilibili-player-iconfont.icon-24triangle3:before {
+		content: "\E63C"
+	}
+
+	.bilibili-player-iconfont.icon-24triangle4:before {
+		content: "\E63D"
+	}
+
+	.bilibili-player-iconfont.icon-48danmunormal:before {
+		content: "\E643"
+	}
+
+	.bilibili-player-iconfont.icon-48danmutext:before {
+		content: "\E644"
+	}
+
+	.bilibili-player-iconfont.icon-48danmuunreg:before {
+		content: "\E645"
+	}
+
+	.bilibili-player-iconfont.icon-24setting:before {
+		content: "\E646"
+	}
+
+	.bilibili-player-iconfont.icon-24more:before {
+		content: "\E647"
+	}
+
+	.bilibili-player-iconfont.icon-24back:before {
+		content: "\E64A"
+	}
+
+	.bilibili-player-iconfont.icon-complete:before {
+		content: "\E64B"
+	}
+
+	.bilibili-player-iconfont.icon-close:before {
+		content: "\E64C"
+	}
+}

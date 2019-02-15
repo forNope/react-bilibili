@@ -1,0 +1,48 @@
+.recommend {
+	width: 260px;
+	padding: 14px;
+	background-color: $white;
+	box-shadow: $right-bottom-box-shadow;
+	@include border-bottom-radius(4px);
+
+	h3 {
+		margin: 0;
+	}
+
+	.title-box {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 10px;
+
+		.more {
+			width: 45px;
+			height: 20px;
+			line-height: 20px;
+			text-align: center;
+			transition: background-color 0.3s;
+			border: 1px solid $gray-300;
+			border-radius: 3px;
+
+			&:hover {
+				background-color: $gray-400;
+			}
+
+			.icon {
+				display: inline-block;
+				position: relative;
+				width: 8px;
+				height: 12px;
+				top: 2px;
+				background-image: resolve("assets/icons.png");
+				background-position: -476px -218px;
+			}
+		}
+	}
+
+	.bangumi {
+		display: flex;
+		justify-content: space-between;
+	}
+}

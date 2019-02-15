@@ -1,0 +1,112 @@
+.game-box {
+	position: absolute;
+	width: 680px;
+	height: 258px;
+	overflow: hidden;
+	@include border-bottom-radius($border-radius);
+
+	.left, .right {
+		display: inline-block;
+		height: 100%;
+		background-color: white;
+	}
+
+	.left {
+		.banner {
+			width: 240px;
+			height: 138px;
+			margin-top: 8px;
+			margin-left: 12px;
+
+			.img {
+				width: 100%;
+				height: 100%;
+				@include border-radius($border-radius);
+			}
+
+			.title {
+				position: absolute;
+				width: 100%;
+				height: 23px;
+				font-size: $font-size-sm;
+				line-height: 23px;
+				padding: 0 10px;
+				bottom: 0;
+				border-radius: $border-radius;
+				background-color: $transparent-dark;
+				color: $white;
+			}
+		}
+
+		.brief {
+			margin-top: 6px;
+
+			.img {
+				width: 64px;
+				height: 64px;
+				border-radius: $border-radius-lg;
+			}
+
+			.title {
+				font-size: $font-size-base;
+				margin-top: 8px;
+			}
+
+			.link {
+				display: inline-block;
+				text-align: center;
+				padding: 8px 12px 12px;
+
+				&:hover {
+					background-color: $transparent-dark;
+				}
+			}
+		}
+	}
+
+	.right {
+		vertical-align: top;
+		position: relative;
+		width: 198px;
+		background-image: url("./assets/line.png");
+		background-repeat: no-repeat;
+
+		.bbs-link {
+			position: absolute;
+			font-size: $font-size-sm;
+			color: $blue;
+			top: 6px;
+			right: 5px;
+			z-index: 99;
+		}
+
+		.all {
+			width: 100%;
+			padding-top: 35px;
+			background: url("./assets/title.png") no-repeat;
+			overflow: hidden;
+
+			.link {
+				display: block;
+				width: 100%;
+				line-height: 28px;
+				font-size: $font-size-sm;
+				margin-left: 5px;
+				padding-left: 18px;
+
+				&:hover {
+					background-color: $transparent-dark;
+					color: $primary;
+				}
+			}
+		}
+	}
+
+	.character {
+		position: absolute;
+		width: 200px;
+		height: 220px;
+		top: 29px;
+		right: 40px;
+	}
+}

@@ -1,0 +1,25 @@
+.container {
+	width: 160px;
+	height: 152px;
+	margin-bottom: 20px;
+	float: left;
+
+	[data-role="mask"] {
+		@extend %hidden;
+	}
+
+	&:hover {
+		[data-role="mask"] {
+			@extend %visible;
+		}
+
+		[data-role="title"] {
+			color: $primary;
+		}
+
+		[data-role="slide"] {
+			bottom: -20px;
+		}
+
+	}
+}

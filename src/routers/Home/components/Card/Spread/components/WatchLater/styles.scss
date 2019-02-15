@@ -1,0 +1,24 @@
+.watch-later {
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	bottom: 5px;
+	right: 5px;
+	cursor: pointer;
+	background: url(./watchLater.png) no-repeat;
+	z-index: 99;
+
+	&:hover:before {
+		content: '稍后再看';
+		position: absolute;
+		width: 60px;
+		top: -16px;
+		padding: 2px;
+		font-size: $font-size-sm;
+		border-radius: 6px;
+		text-align: center;
+		@extend %horizontally-center;
+		color: white;
+		background-color: $dark-light-lg;
+	}
+}

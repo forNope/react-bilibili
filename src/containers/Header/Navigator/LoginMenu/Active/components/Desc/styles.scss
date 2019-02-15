@@ -1,0 +1,13 @@
+.desc {
+	margin-top: 6px;
+	color: $gray-600;
+	@include ellipsis(90%);
+
+	&.active {
+		color: $primary;
+
+		&:hover {
+			text-decoration: $primary solid underline;
+		}
+	}
+}

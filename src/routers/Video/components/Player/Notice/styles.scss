@@ -1,0 +1,65 @@
+.notice {
+  @include display(flex);
+
+  width: 100%;
+  height: 46px;
+  align-items: center;
+  justify-content: space-around;
+  background-color: $dark;
+
+  .scroll-container {
+    flex: 10;
+    overflow: hidden;
+  }
+
+  .pre, .next, .scroll-container {
+    height: 36px;
+    background-color: $transparent-dark;
+  }
+
+  .pre, .next {
+    flex: 1;
+    margin: 0 5px;
+    cursor: pointer;
+
+    &:after {
+      content: "";
+      position: absolute;
+      border-width: 10px;
+
+      @extend %all-center;
+    }
+  }
+
+  .pre {
+    &:hover:after {
+      border-right-color: $primary;
+    }
+
+    &:after {
+      border-right-color: $white;
+
+      @extend %left-arrow;
+    }
+  }
+
+  .next {
+    &:hover:after {
+      border-left-color: $primary;
+    }
+
+    &:after {
+      border-left-color: $white;
+
+      @extend %right-arrow;
+    }
+  }
+
+  .item {
+    flex: 1;
+    height: 100%;
+    line-height: 36px;
+    text-align: center;
+    color: white;
+  }
+}

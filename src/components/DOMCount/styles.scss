@@ -1,0 +1,14 @@
+.container {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  top: 0;
+  left: 10px;
+  background-color: skyblue;
+  z-index: 999;
+
+  .canvas {
+    position: absolute;
+    bottom: 0;
+  }
+}

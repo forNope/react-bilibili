@@ -1,0 +1,28 @@
+@import "vendor/normalize";
+@import "vendor/fa/index";
+@import "base/index";
+@import "font-icons.scss";
+
+:global {
+	.app-wrapper {
+		position: relative;
+		margin: 0 auto;
+
+		@media (max-width: $large-device) {
+			width: 980px;
+		}
+
+		@media (min-width: $large-device) {
+			width: 1200px;
+		}
+	}
+
+	.test {
+		z-index: 999999 !important;
+		position: absolute !important;
+		@extend %horizontally-center;
+		top: 0 !important;
+		visibility: visible !important;
+		opacity: 1 !important;
+	}
+}
